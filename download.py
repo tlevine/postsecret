@@ -1,9 +1,10 @@
 #!/usr/bin/env python2
 from os.path import join as path
+from time import sleep
 from lxml.html import fromstring
 from cache import get
 
-def main(datestamp):
+def main(datestamp, sleep_interval = 1):
     'Download given a datestamp.'
     # Set the directories.
     index_dir = path('downloads', 'index', datestamp)
@@ -17,6 +18,7 @@ def main(datestamp):
     srcs = html.xpath('//img/@src')
     for src in srcs:
         get(src, cachedir = image_dir)
+        sleep(sleep_interval)
 
 if __name__ == '__main__':
     import datetime
