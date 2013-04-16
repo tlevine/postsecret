@@ -1,6 +1,6 @@
 [submodule "downloads"]
 	path = downloads
 	url = git@github.com:tlevine/postsecret-downloads.git
-[submodule "downloads-sw.git"]
-	path = downloads-sw.git
+[submodule "downloads-sw"]
+	path = downloads-sw
 	url = git@github.com:tlevine/postsecret-downloads-sw.git
